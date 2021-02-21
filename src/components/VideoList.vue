@@ -1,27 +1,30 @@
 <template>
   <div>
-    <ul>
+    <ul className="list-group">
       <VideoListItem
-        v-bind:video="video"
-        :key="video"
         v-for="video in videos"
+        :video="video"
+        :key="video.etag"
+        @videoSelect="onVideoSelect"
       ></VideoListItem>
     </ul>
   </div>
 </template>
 
 <script>
-import VideoListItem from './VideoListItem';
+import VideoListItem from "./VideoListItem";
 
 export default {
-  name: 'VideoList',
+  name: "VideoList",
   components: {
     VideoListItem
   },
-  props: {
-    videos: Array
-  },
-  methods: {}
+  props: ["videos"],
+  methods: {
+    onVideoSelect(video) {
+      this.$emit("videoSelect", video);
+    }
+  }
 };
 </script>
 

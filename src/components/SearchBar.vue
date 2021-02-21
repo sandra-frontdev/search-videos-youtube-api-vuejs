@@ -6,13 +6,22 @@
 
 <script>
 export default {
-  name: 'SearchBar',
+  name: "SearchBar",
   methods: {
     onInput: function(e) {
-      this.$emit('termChange', e.target.value);
+      this.$emit("termChange", e.target.value);
     }
   }
 };
 </script>
 
-<style></style>
+<style scoped>
+input {
+  width: 75%;
+}
+
+div {
+  text-align: center;
+  margin: 20px;
+}
+</style>
