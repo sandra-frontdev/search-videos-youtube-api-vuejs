@@ -8,8 +8,8 @@
 export default {
   name: "SearchBar",
   methods: {
-    onInput: function(e) {
-      this.$emit("termChange", e.target.value);
+    onInput: function(event) {
+      this.$emit("termChange", event.target.value);
     }
   }
 };
@@ -19,7 +19,6 @@ export default {
 input {
   width: 75%;
 }
-
 div {
   text-align: center;
   margin: 20px;

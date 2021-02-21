@@ -29,11 +29,6 @@ li {
   display: flex;
   cursor: pointer;
 }
-
-li > div {
-  margin-left: 10px;
-}
-
 li:hover {
   background-color: #eee;
 }
